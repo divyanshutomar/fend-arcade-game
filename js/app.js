@@ -15,14 +15,6 @@ var playerIniPos = {
 function between(x, min, max) {
   return x >= min && x <= max;
 }
-//Checks Collion of an Enemy with the Player and resets the player to initial position in case if collision
-function checkCollWithPlayer(xE,yE) {
-    if (between(xE,player.x,player.x+2) && yE ===player.y)
-    {
-        player.y = playerIniPos.y;
-        player.x = playerIniPos.x;
-    }
-}
 
 //SuperClass Character that contains common properties and functionalities like location coordinates,rendering,etc.
 var Character = function(xpos,ypos,imageName) {
@@ -45,6 +37,14 @@ var Enemy = function(xe,ye,speed) {
 Enemy.prototype = Object.create(Character.prototype);
 Enemy.prototype.constructor = Enemy;
 
+//Checks Collion of an Enemy with the Player and resets the player to initial position in case if collision
+Enemy.prototype.checkCollWithPlayer = function() {
+    if (between(parseInt(this.x),player.x,player.x+2) && this.y ===player.y) {
+        player.y = playerIniPos.y;
+        player.x = playerIniPos.x;
+    }
+}
+
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
@@ -52,7 +52,7 @@ Enemy.prototype.update = function(dt) {
     if (this.x > 505) {
         this.x = -40;
     }
-    checkCollWithPlayer(parseInt(this.x),this.y);
+    this.checkCollWithPlayer();
 };
 
 //Player Subclass 
