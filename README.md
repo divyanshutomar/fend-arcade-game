@@ -12,4 +12,4 @@ In terminal window, run the following commands to save the game to your computer
 
 
 ## Running the game
-Open the `index.html` file in any browser and enjoy the game !
+Open the `index.html` file present in `fend-arcade-game` folder in any browser and enjoy the game !
