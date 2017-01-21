@@ -1,6 +1,15 @@
-frontend-nanodegree-arcade-game
-===============================
+# fend-arcade-game
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+Arcade game where in a player tries to cross a zone of moving enemies without any collision.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Setup and Installation
+Go to a directory from where you want to run/save this game and open a terminal instance in that directory.
+In terminal window, run the following commands to save the game to your computer.
+
+> git clone https://github.com/divyanshutomar/fend-arcade-game.git
+
+> cd fend-arcade-game
+
+
+## Running the game
+Open the `index.html` file in any browser and enjoy the game !
